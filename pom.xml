@@ -14,7 +14,10 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <sonar.organization>garciarodrigo99</sonar.organization>
-  	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  		<sonar.coverage.jacoco.xmlReportPaths>
+    		../app-it/target/site/jacoco-aggregate/jacoco.xml
+  		</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
     <build>
@@ -72,5 +75,11 @@
             <version>5.6.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+	      <groupId>org.jacoco</groupId>
+	      <artifactId>jacoco-maven-plugin</artifactId>
+	      <version>0.8.7</version>
+	      <scope>test</scope>
+		</dependency>
     </dependencies>
 </project>
